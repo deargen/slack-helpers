@@ -945,6 +945,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Installation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -992,6 +1009,31 @@
 </tr>
 </tbody>
 </table>
+<h2 id="installation">🛠️ Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>We recommend using Conda because it's easier to install Cairo. If you don't want to use Conda, you can install Cairo using apt-get or brew.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>slack-helpers<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.12
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>conda<span class="w"> </span>activate<span class="w"> </span>slack-helpers
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>pip<span class="w"> </span>install<span class="w"> </span>slack-helpers
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>bash<span class="w"> </span>scripts/install_binaries.sh<span class="w">  </span><span class="c1"># install Fira Code font ~/.local/share/fonts, and Cairo using Conda</span>
+</code></pre></div>
+<p>Set environment variables for the slack token and channel.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">SLACK_BOT_TOKEN</span><span class="o">=</span>xoxb-xxxx
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nv">SLACK_APP_TOKEN</span><span class="o">=</span>xapp-xxxx
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nv">SLACK_CHANNEL_ID</span><span class="o">=</span>C06LH5A9FEE
+</code></pre></div>
+<p>Check health of the installation. The below output shows that the Slack tokens are not set, and the Fira Code font is installed.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp">$ </span>slack-helpers<span class="w"> </span>health
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="go">09/07 21:37:12 ERROR    slack_helpers.health.slack - 😡 Please set the environment variable SLACK_BOT_TOKEN.                                                slack.py:14</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="go">               ERROR    slack_helpers.health.slack - 😡 Please set the environment variable SLACK_APP_TOKEN.                                                slack.py:14</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="go">               ERROR    slack_helpers.health.slack - 😡 Please set the environment variable SLACK_CHANNEL_ID.                                               slack.py:14</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="go">               INFO     slack_helpers.health.slack - 🚀 Sending a test message to the Slack channel...                                                      slack.py:45</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="go">               WARNING  slack_helpers.send_only - You tried to send messages on Slack, but the token is not set. All messages will be ignored.          send_only.py:21</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="go">               ERROR    slack_helpers.health.slack - 😡 The response is None.                                                                               slack.py:49</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="go">               INFO     slack_helpers.health.font - ✅ FiraCode font is installed.                                                                           font.py:35</span>
+</code></pre></div>
+<h1 id="usage">🚀 Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>
+</code></pre></div>
 
 
 
