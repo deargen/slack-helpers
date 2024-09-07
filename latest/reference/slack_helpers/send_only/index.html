@@ -1253,7 +1253,7 @@
   
       <p>Send a text as a file to the default client and channel (if not specified).</p>
 <p>Slack is stupid and having special characters in the file makes it think it's a binary file.
-If ensure_preview is True, then we append six double quotes at the beginning of the file so Slack thinks
+If ensure_preview is True, then we append <code>dear-viewer</code> at the beginning of the file so Slack thinks
 it's a python file and will preview it.</p>
 
 <details class="note" open>
@@ -1327,7 +1327,7 @@ You can set the <code>filename</code> to be like "file.html" for svg files with 
           </td>
           <td>
             <div class="doc-md-description">
-              <p>If True, append six double quotes at the beginning of the file to ensure that
+              <p>If True, append <code>dear-viewer</code> at the beginning of the file to ensure that
             Slack will preview it.</p>
             </div>
           </td>
@@ -1448,26 +1448,26 @@ You can set the <code>filename</code> to be like "file.html" for svg files with 
 <a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="sd">    Send a text as a file to the default client and channel (if not specified).</span>
 <a id="__codelineno-0-58" name="__codelineno-0-58"></a>
 <a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="sd">    Slack is stupid and having special characters in the file makes it think it&#39;s a binary file.</span>
-<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="sd">    If ensure_preview is True, then we append six double quotes at the beginning of the file so Slack thinks</span>
-<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="sd">    it&#39;s a python file and will preview it.</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="sd">    If ensure_preview is True, then we append `&quot;&quot;&quot;</span> <span class="s2">&quot;dear-viewer&quot;</span> <span class="s2">&quot;&quot;&quot;` at the beginning of the file so Slack thinks</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="s2">    it&#39;s a python file and will preview it.</span>
 <a id="__codelineno-0-62" name="__codelineno-0-62"></a>
-<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="sd">    Note:</span>
-<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="sd">        `ensure_preview` is a hacky workaround and may not work in the future.</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="s2">    Note:</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="s2">        `ensure_preview` is a hacky workaround and may not work in the future.</span>
 <a id="__codelineno-0-65" name="__codelineno-0-65"></a>
-<a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="sd">    Issues:</span>
-<a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="sd">        `ensure_preview` only works with text-ish files (txt, html, etc.) and not with other files (pdf, png, svg).</span>
-<a id="__codelineno-0-68" name="__codelineno-0-68"></a><span class="sd">        You can set the `filename` to be like &quot;file.html&quot; for svg files with the `ensure_preview` flag.</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="s2">    Issues:</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="s2">        `ensure_preview` only works with text-ish files (txt, html, etc.) and not with other files (pdf, png, svg).</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68"></a><span class="s2">        You can set the `filename` to be like &quot;file.html&quot; for svg files with the `ensure_preview` flag.</span>
 <a id="__codelineno-0-69" name="__codelineno-0-69"></a>
-<a id="__codelineno-0-70" name="__codelineno-0-70"></a><span class="sd">    Args:</span>
-<a id="__codelineno-0-71" name="__codelineno-0-71"></a><span class="sd">        filename:</span>
-<a id="__codelineno-0-72" name="__codelineno-0-72"></a><span class="sd">        content:</span>
-<a id="__codelineno-0-73" name="__codelineno-0-73"></a><span class="sd">        title:</span>
-<a id="__codelineno-0-74" name="__codelineno-0-74"></a><span class="sd">        ensure_preview: If True, append six double quotes at the beginning of the file to ensure that</span>
-<a id="__codelineno-0-75" name="__codelineno-0-75"></a><span class="sd">                        Slack will preview it.</span>
-<a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="sd">        initial_comment:</span>
-<a id="__codelineno-0-77" name="__codelineno-0-77"></a><span class="sd">        channel_id:</span>
-<a id="__codelineno-0-78" name="__codelineno-0-78"></a><span class="sd">        client:</span>
-<a id="__codelineno-0-79" name="__codelineno-0-79"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70"></a><span class="s2">    Args:</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71"></a><span class="s2">        filename:</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72"></a><span class="s2">        content:</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73"></a><span class="s2">        title:</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74"></a><span class="s2">        ensure_preview: If True, append `&quot;&quot;&quot;</span> <span class="s2">&quot;dear-viewer&quot;</span> <span class="s2">&quot;&quot;&quot;` at the beginning of the file to ensure that</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75"></a><span class="s2">                        Slack will preview it.</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="s2">        initial_comment:</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77"></a><span class="s2">        channel_id:</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78"></a><span class="s2">        client:</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79"></a><span class="s2">    &quot;&quot;&quot;</span>
 <a id="__codelineno-0-80" name="__codelineno-0-80"></a>    <span class="k">if</span> <span class="n">client</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 <a id="__codelineno-0-81" name="__codelineno-0-81"></a>        <span class="n">client</span> <span class="o">=</span> <span class="n">default_client</span>
 <a id="__codelineno-0-82" name="__codelineno-0-82"></a>    <span class="k">if</span> <span class="n">client</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
