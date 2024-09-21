@@ -132,10 +132,8 @@ banned-module-level-imports = ["torch", "tensorflow"]
 include = ["src"]
 
 typeCheckingMode = "standard"
-autoSearchPaths = true
 useLibraryCodeForTypes = true
 autoImportCompletions = true
-diagnosticsMode = "openFilesOnly"
 
 pythonVersion = "3.10"
 
