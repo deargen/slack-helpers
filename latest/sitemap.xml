@@ -2,72 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://deargen.gitlab.io/slack-helpers/latest/</loc>
-         <lastmod>2024-09-21</lastmod>
+         <lastmod>2024-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://deargen.gitlab.io/slack-helpers/latest/CHANGELOG/</loc>
-         <lastmod>2024-09-21</lastmod>
+         <lastmod>2024-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://deargen.gitlab.io/slack-helpers/latest/reference/SUMMARY/</loc>
-         <lastmod>2024-09-21</lastmod>
+         <lastmod>2024-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://deargen.gitlab.io/slack-helpers/latest/reference/slack_helpers/</loc>
-         <lastmod>2024-09-21</lastmod>
+         <lastmod>2024-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://deargen.gitlab.io/slack-helpers/latest/reference/slack_helpers/interactive/</loc>
-         <lastmod>2024-09-21</lastmod>
+         <lastmod>2024-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://deargen.gitlab.io/slack-helpers/latest/reference/slack_helpers/send_only/</loc>
-         <lastmod>2024-09-21</lastmod>
+         <lastmod>2024-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://deargen.gitlab.io/slack-helpers/latest/reference/slack_helpers/cli/</loc>
-         <lastmod>2024-09-21</lastmod>
+         <lastmod>2024-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://deargen.gitlab.io/slack-helpers/latest/reference/slack_helpers/cli/main/</loc>
-         <lastmod>2024-09-21</lastmod>
+         <lastmod>2024-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://deargen.gitlab.io/slack-helpers/latest/reference/slack_helpers/health/</loc>
-         <lastmod>2024-09-21</lastmod>
+         <lastmod>2024-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://deargen.gitlab.io/slack-helpers/latest/reference/slack_helpers/health/font/</loc>
-         <lastmod>2024-09-21</lastmod>
+         <lastmod>2024-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://deargen.gitlab.io/slack-helpers/latest/reference/slack_helpers/health/slack/</loc>
-         <lastmod>2024-09-21</lastmod>
+         <lastmod>2024-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://deargen.gitlab.io/slack-helpers/latest/reference/slack_helpers/utils/</loc>
-         <lastmod>2024-09-21</lastmod>
+         <lastmod>2024-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://deargen.gitlab.io/slack-helpers/latest/reference/slack_helpers/utils/log/</loc>
-         <lastmod>2024-09-21</lastmod>
+         <lastmod>2024-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://deargen.gitlab.io/slack-helpers/latest/reference/slack_helpers/utils/rich/</loc>
-         <lastmod>2024-09-21</lastmod>
+         <lastmod>2024-10-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
