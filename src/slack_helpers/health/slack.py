@@ -6,7 +6,7 @@ from ..send_only import send_text
 logger = logging.getLogger(__name__)
 
 
-def check_one_env(env_var, secret=False, secret_show_first_n=0):
+def check_one_env(env_var, *, secret=False, secret_show_first_n=0):
     value = os.environ.get(env_var)
     if value is None:
         logger.error(f"😡 Please set the environment variable {env_var}.")
@@ -24,16 +24,24 @@ def check_one_env(env_var, secret=False, secret_show_first_n=0):
     return True
 
 
-def check_many_env(env_vars, secret=False, secret_show_first_n=0):
+def check_many_env(env_vars, *, secret=False, secret_show_first_n=0):
     ret = True
     for env_var in env_vars:
-        if not check_one_env(env_var, secret, secret_show_first_n):
+        if not check_one_env(
+            env_var,
+            secret=secret,
+            secret_show_first_n=secret_show_first_n,
+        ):
             ret = False
     return ret
 
 
 def check_env():
-    secrets_checked = check_many_env(["SLACK_BOT_TOKEN", "SLACK_APP_TOKEN"], True, 5)
+    secrets_checked = check_many_env(
+        ["SLACK_BOT_TOKEN", "SLACK_APP_TOKEN"],
+        secret=True,
+        secret_show_first_n=5,
+    )
     normal_checked = check_many_env(["SLACK_CHANNEL_ID"])
 
     return secrets_checked and normal_checked

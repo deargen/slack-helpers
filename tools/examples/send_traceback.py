@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 def main():
     try:
         setup_logging()
-        raise Exception("This is an exception")
+        raise Exception("This is an exception")  # noqa: TRY301 TRY002
     except Exception:
         logger.exception("Exception occurred")
         slack_text = f"Exception occurred from host {socket.gethostname()}\n\n```{traceback.format_exc()}```"

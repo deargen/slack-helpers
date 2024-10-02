@@ -14,7 +14,7 @@ warned = False
 
 
 def warn_once():
-    global warned
+    global warned  # noqa: PLW0603
     if not warned:
         logger.warning(
             "You tried to send messages on Slack, but the token is not set. All messages will be ignored."
@@ -57,7 +57,7 @@ def send_text_as_file(
     Send a text as a file to the default client and channel (if not specified).
 
     Slack is stupid and having special characters in the file makes it think it's a binary file.
-    If ensure_preview is True, then we append `""" "dear-viewer" """` at the beginning of the file so Slack thinks
+    If ensure_preview is True, then we append `\"\"\"\"dear-viewer\"\"\"\"` at the beginning of the file so Slack thinks
     it's a python file and will preview it.
 
     Note:
@@ -71,12 +71,12 @@ def send_text_as_file(
         filename:
         content:
         title:
-        ensure_preview: If True, append `""" "dear-viewer" """` at the beginning of the file to ensure that
+        ensure_preview: If True, append `\"\"\"\"dear-viewer\"\"\"\"` at the beginning of the file to ensure that
                         Slack will preview it.
         initial_comment:
         channel_id:
         client:
-    """
+    """  # noqa: D301
     if client is None:
         client = default_client
     if client is None:
@@ -255,7 +255,7 @@ def send_svg_as_pdf(
     elif isinstance(svg_file, IOBase):
         cairosvg.svg2pdf(file_obj=svg_file, write_to=pdf_buf)
     else:
-        raise ValueError(f"Unsupported type {type(svg_file)}")
+        raise TypeError(f"Unsupported type {type(svg_file)}")
 
     pdf_buf.seek(0)
 

@@ -122,7 +122,7 @@ def setup_logging(
 
 def main():
     logger.info("Hello, world!")
-    raise Exception("Test exception")
+    raise Exception("Test exception")  # noqa: TRY002
 
 
 if __name__ == "__main__":

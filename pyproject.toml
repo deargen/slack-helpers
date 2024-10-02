@@ -52,6 +52,7 @@ src = ["src"]  # for ruff isort
 extend-exclude = [
   "src/slack_helpers/_version.py",  # CHANGE
 ]
+namespace-packages = ["tools", "scripts"]  # for INP rule, suppress on these directories
 
 [tool.ruff.lint]
 # OPTIONALLY ADD MORE LATER
@@ -73,6 +74,7 @@ select = [
   "RET503",  # return
   "PTH",  # path
   "NPY",  # numpy
+  "PD",   # pandas
   "PYI",  # type stubs for pyright/pylance
   "PT",   # pytest
   "PIE",  #
@@ -82,6 +84,21 @@ select = [
   "DTZ",  # datetime
   "YTT",
   "ASYNC",
+  "FBT",  # boolean trap
+  "A",    # Shadowing python builtins
+  "EXE",  # executable (shebang)
+  "FA",   # future annotations
+  "ISC",  # Implicit string concatenation
+  "ICN",  # Import convention 
+  "INP",  # Implicit namespace package (no __init__.py)
+  "Q",    # Quotes
+  "RSE",  # raise
+  "SLOT", # __slots__
+  "PL",   # Pylint
+  "TRY",  # try
+  "FAST", # FastAPI
+  "AIR",  # airflow
+  "DOC",  # docstring
 
   # Not important
   "T10",  # debug statements
@@ -97,12 +114,14 @@ ignore = [
   "D212",    # Multi-line docstring summary should start at the first line
   "D417",    # require documentation for every function parameter.
   "D401",    # require an imperative mood for all docstrings.
+  "DOC201",  # missing Return field in docstring
   "PTH123",  # Path.open should be used instead of built-in open
   "PT006",   # Pytest parameterize style
   "N812",    # Lowercase `functional` imported as non-lowercase `F` (import torch.nn.functional as F)
   "NPY002",  # legacy numpy random
   "UP017",   # datetime.timezone.utc -> datetime.UTC
   "SIM108",  # use ternary operator instead of if-else
+  "TRY003",  # long message in except
 ]
 
 [tool.ruff.lint.pydocstyle]
@@ -127,6 +146,11 @@ known-third-party = ["wandb"]
 # that they're imported lazily (e.g., within a function definition, if TYPE_CHECKING, etc.)
 # NOTE: Ruff code TID is currently disabled, so this settings doesn't do anything.
 banned-module-level-imports = ["torch", "tensorflow"]
+
+[tool.ruff.lint.pylint]
+max-args = 10
+max-bool-expr = 10
+max-statements = 100
 
 [tool.pyright]
 include = ["src"]

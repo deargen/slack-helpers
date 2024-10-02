@@ -5,7 +5,9 @@ logger = logging.getLogger(__name__)
 
 
 class FontNotInstalledError(Exception):
-    pass
+    def __init__(self, font_name: str):
+        self.message = f"Font {font_name} is not installed."
+        super().__init__(self.message)
 
 
 def verify_fonts_installed():
@@ -30,11 +32,12 @@ def verify_fonts_installed():
 def verify_fonts_bool():
     try:
         verify_fonts_installed()
+    except FontNotInstalledError:
+        logger.exception("😡")
+        return False
+    else:
         logger.info("✅ FiraCode font is installed.")
         return True
-    except FontNotInstalledError:
-        logger.error("😡 FiraCode font is not installed.")
-        return False
 
 
 if __name__ == "__main__":
