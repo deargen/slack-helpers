@@ -43,6 +43,15 @@ dependencies = {file = ["deps/requirements.in"]}
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.pyright]
+include = ["src"]
+
+typeCheckingMode = "standard"
+useLibraryCodeForTypes = true
+autoImportCompletions = true
+
+pythonVersion = "3.10"
+
 [tool.pytest.ini_options]
 addopts = "--cov=slack_helpers" # CHANGE (name of the importing module name)
 testpaths = ["tests"]
@@ -52,7 +61,7 @@ src = ["src"]  # for ruff isort
 extend-exclude = [
   "src/slack_helpers/_version.py",  # CHANGE
 ]
-namespace-packages = ["tools", "scripts"]  # for INP rule, suppress on these directories
+namespace-packages = ["tools", "scripts", "tests"]  # for INP rule, suppress on these directories
 
 [tool.ruff.lint]
 # OPTIONALLY ADD MORE LATER
@@ -151,15 +160,6 @@ banned-module-level-imports = ["torch", "tensorflow"]
 max-args = 10
 max-bool-expr = 10
 max-statements = 100
-
-[tool.pyright]
-include = ["src"]
-
-typeCheckingMode = "standard"
-useLibraryCodeForTypes = true
-autoImportCompletions = true
-
-pythonVersion = "3.10"
 
 [tool.coverage.report]
 omit = [
