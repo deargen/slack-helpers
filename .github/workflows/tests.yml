@@ -18,7 +18,7 @@ jobs:
       run:
         shell: bash -leo pipefail {0} # required by setup-micromamba
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup micromamba and uv
         uses: deargen/workflows/actions/setup-micromamba-and-uv@master
       - name: Cache Micromamba environment
@@ -50,7 +50,7 @@ jobs:
       run:
         shell: bash -leo pipefail {0} # required by setup-micromamba
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup micromamba and uv
         uses: deargen/workflows/actions/setup-micromamba-and-uv@master
       - name: Cache Micromamba environment
