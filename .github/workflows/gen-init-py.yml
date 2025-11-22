@@ -13,7 +13,7 @@ jobs:
     name: Generate __init__.py files
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: deargen/workflows/actions/gen-init-py@master
         with:
           src-dir: ${{ github.event.inputs.src-dir }}
