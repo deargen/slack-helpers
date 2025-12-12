@@ -23,7 +23,7 @@ jobs:
         uses: deargen/workflows/actions/setup-micromamba-and-uv@master
       - name: Cache Micromamba environment
         id: cache-micromamba
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         env:
           cache-name: cache-micromamba
         with:
@@ -55,7 +55,7 @@ jobs:
         uses: deargen/workflows/actions/setup-micromamba-and-uv@master
       - name: Cache Micromamba environment
         id: cache-micromamba
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         env:
           cache-name: cache-micromamba
         with:
